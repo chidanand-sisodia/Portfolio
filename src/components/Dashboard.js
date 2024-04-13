@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
+import Alert from './Alert';
 
 function Dashboard() {
     const titles = ['Software Developer', 'Web Developer', 'Aspiring Data Scientist'];
@@ -31,6 +32,8 @@ function Dashboard() {
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
+            <Alert onClose={() => console.log('Alert closed')} />
+
             <div className="text-center">
                
             <h1 className='text-5xl font-bold mb-9'>Hello, </h1>
