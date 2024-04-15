@@ -37,8 +37,8 @@ const certifications = [
 
 function Certificates() {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container px-20 py-24 mx-auto">
+   <section className="text-gray-600 body-font">
+      <div className="container lg:px-20 lg:py-24 mx-auto pt-20 "> {/* Adjust pt-20 to match your navbar's height */}
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Certifications</h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">These are some of the certifications I have earned that validate my skills and capabilities in various technology areas.</p>
@@ -46,10 +46,10 @@ function Certificates() {
             <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
           </div>
         </div>
-        <div className="flex flex-wrap -m-4">
+        <div className="flex flex-wrap ">
           {certifications.map((cert) => (
-            <div key={cert.id} className="p-4 md:w-1/3">
-              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <div key={cert.id} className="p-4 md:w-1/3 lg:w-1/4 xl:w-1/3">
+              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 ">
                 <a href={cert.certificateUrl} target="_blank" rel="noopener noreferrer">
                   <img 
                     className="lg:h-48 md:h-36 w-full object-cover object-center transform hover:scale-110 transition-transform duration-300"
@@ -66,6 +66,7 @@ function Certificates() {
         </div>
       </div>
     </section>
+
   );
 }
 

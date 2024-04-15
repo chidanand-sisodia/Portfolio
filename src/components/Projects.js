@@ -178,7 +178,7 @@ function Projects() {
 
   return (
     <section className="text-gray-600 body-font ">
-      <div className="container px-16 py-24 mx-auto">
+      <div className="container lg:px-16 lg:py-24 mx-auto">
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">Projects</h1>
         <p className="text-lg text-gray-600 mb-8">
@@ -187,10 +187,10 @@ function Projects() {
         </p>
         <hr className="border-b-2  border-gray-300 my-8 mx-auto w-3/4" />
       </div>
-        <div className="flex flex-wrap -m-4 ">
+        <div className="flex flex-wrap sm:px-8 ">
           {projects.map((project) => (
             <div key={project.id} className="p-4 md:w-1/3 ">
-              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  hover:shadow-lg transition-shadow duration-300">
+              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  hover:shadow-lg transition-shadow duration-300 ">
               {
                   project.imageUrl ? (
                       <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.imageUrl} alt="Project" />
