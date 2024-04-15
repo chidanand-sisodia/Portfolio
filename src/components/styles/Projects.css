@@ -1,0 +1,26 @@
+.marquee {
+    width: 100%; /* Full container width */
+    overflow: hidden; /* Hide anything outside the container */
+    position: relative;
+}
+
+.track {
+    display: flex;
+    width: calc(100% * 3); /* Double container width for looping */
+    position: absolute;
+    animation: marquee 10s linear infinite; /* Adjust timing as needed */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Only move half way for seamless looping */
+}
+
+.paused {
+    animation-play-state: paused; /* Ensures animation pauses */
+}
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 25px;
+}

@@ -88,62 +88,64 @@
 
 import React, { useState } from 'react';
 import { FaGithub, FaHeart, FaTimes,FaEye } from 'react-icons/fa';
+import { FaNodeJs, FaReact, FaPython } from 'react-icons/fa';
+import { SiMongodb, SiExpress } from 'react-icons/si';
+import { GiArtificialIntelligence, GiBrain } from 'react-icons/gi';
+import './styles/Projects.css';
 
 const initialProjects = [
   {
     id: 1,
-    title: "Project One",
+    category:"MERN",
+    title: "QuizBuzz",
     description: "Brief description of Project One.",
-    imageUrl: "https://dummyimage.com/720x400",
+    imageUrl: "https://ik.imagekit.io/dpst6vive/quiz1.png?updatedAt=1713161397775",
     githubUrl: "#",
     likes: 0,
     views: 1200
   },
   {
-    id: 2,
-    title: "Project One",
+    id: 2, 
+    category:"MERN",
+    title: "Email Spam Detection",
     description: "Brief description of Project One.",
-    imageUrl: "https://dummyimage.com/720x400",
+    imageUrl: "https://ik.imagekit.io/dpst6vive/spam_detection_ss1.png?updatedAt=1713162838781",
     githubUrl: "#",
     likes: 0,
     views: 1200
   },
   {
     id: 3,
-    title: "Project One",
+    category:"MERN",
+    title: "NEWS-Mania",
     description: "Brief description of Project One.",
-    imageUrl: "https://dummyimage.com/720x400",
+    imageUrl: "https://ik.imagekit.io/dpst6vive/NewsMania.png?updatedAt=1713166626873",
     githubUrl: "#",
     likes: 0,
     views: 1200
   },
   {
     id: 4,
-    title: "Project One",
+    category:"MERN",
+    title: "Support-System",
     description: "Brief description of Project One.",
-    imageUrl: "https://dummyimage.com/720x400",
+    imageUrl: "https://ik.imagekit.io/dpst6vive/Screenshot%202024-03-20%20122730.png?updatedAt=1710918198062",
     githubUrl: "#",
     likes: 0,
     views: 1200
   },
   {
     id: 5,
-    title: "Project One",
+    category:"Python",
+    title: "Turtle Crossing",
     description: "Brief description of Project One.",
-    imageUrl: "https://dummyimage.com/720x400",
+    imageUrl: "",
+    videoUrl: "https://ik.imagekit.io/dpst6vive/turtle_cross1.mp4?updatedAt=1713169245333",
     githubUrl: "#",
     likes: 0,
     views: 1200
   },
-  {
-    id: 6,
-    title: "Project One",
-    description: "Brief description of Project One.",
-    imageUrl: "https://dummyimage.com/720x400",
-    githubUrl: "#",
-    likes: 0,
-    views: 1200
-  },
+
   
   
   
@@ -171,6 +173,8 @@ function Projects() {
   const closeModal = () => {
     setModalProject(null);
   };
+  const [isHovering, setIsHovering] = useState(false);
+
 
   return (
     <section className="text-gray-600 body-font ">
@@ -187,9 +191,44 @@ function Projects() {
           {projects.map((project) => (
             <div key={project.id} className="p-4 md:w-1/3 ">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  hover:shadow-lg transition-shadow duration-300">
-                <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.imageUrl} alt="project" />
+              {
+                  project.imageUrl ? (
+                      <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.imageUrl} alt="Project" />
+                  ) : (
+                      <video className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.videoUrl} controls>
+                          Your browser does not support the video tag.
+                      </video>
+                  )
+              }
                 <div className="p-6">
+                  <div className='flex gap-3'>
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{project.category}</h2>
+                            <div 
+                      className="marquee"
+                      onMouseEnter={() => setIsHovering(true)}
+                      onMouseLeave={() => setIsHovering(false)}
+                  >
+                      <div className={`track ${isHovering ? 'paused' : ''}`}>
+                          <div className="content flex items-center gap-4">
+                              {/* Icons repeated twice for smooth continuous effect */}
+                              {[...Array(3)].map((_,i) => (
+                                  <>
+                                       <React.Fragment key={i}>
+                                      <SiMongodb className="text-green-600 text-xl" title="MongoDB" />
+                                      <SiExpress className="text-gray-800 text-xl" title="Express.js" />
+                                      <FaReact className="text-blue-500 text-xl" title="React" />
+                                      <FaNodeJs className="text-green-500 text-xl" title="Node.js" />
+                                      <FaPython className="text-blue-400 text-2xl" title="Python" />
+                                      <GiArtificialIntelligence className="text-yellow-500 text-2xl" title="Machine Learning" />
+                                      <GiBrain className="text-purple-500 text-2xl" title="Natural Language Processing" />
+                                      </React.Fragment>
+                                  </>
+                              ))}
+                          </div>
+                      </div>
+                  </div>
+                  </div>
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">{project.title}</h1>
                   <p className="leading-relaxed mb-3">{project.description}</p>
                   <div className="flex items-center flex-wrap ">
@@ -215,7 +254,19 @@ function Projects() {
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 overflow-y-auto h-full w-full px-5 py-24">
           <div className="relative top-20 mx-auto shadow-lg rounded-md bg-white max-w-3xl">
             <div className="p-4">
-              <h2 className="text-lg text-gray-900 font-bold">{modalProject.title}</h2>
+              <h2 className="text-lg text-gray-900 font-bold mb-4">{modalProject.title}</h2>
+              {
+                  modalProject.imageUrl ? (
+                      <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={modalProject.imageUrl} alt="Project" />
+                  ) : (
+                      <video className="lg:h-48 md:h-36 w-full object-cover object-center" src={modalProject.videoUrl} controls>
+                          Your browser does not support the video tag.
+                      </video>
+                  )
+              }                  
+              <p className="leading-relaxed">{modalProject.category}</p>
+              
+    
               <p>{modalProject.description}</p>
               <button className="text-red-500" onClick={() => handleLike(modalProject.id)}>
                 <FaHeart className="mr-1" /> Like ({modalProject.likes})
