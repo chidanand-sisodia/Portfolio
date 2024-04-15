@@ -177,9 +177,9 @@ function Projects() {
 
 
   return (
-    <section className="text-gray-600 body-font ">
-      <div className="container lg:px-16 lg:py-24 mx-auto">
-      <div className="text-center">
+    <section className="text-gray-600  body-font bg-gray-100">
+      <div className="container lg:px-16 lg:py-24 mx-auto pt-20">
+      <div className="text-center mb-20">
         <h1 className="text-4xl font-bold mb-4">Projects</h1>
         <p className="text-lg text-gray-600 mb-8">
           I am passionate about building and exploring new projects that challenge my understanding and enhance my skills.
@@ -189,8 +189,8 @@ function Projects() {
       </div>
         <div className="flex flex-wrap sm:px-8 ">
           {projects.map((project) => (
-            <div key={project.id} className="p-4 md:w-1/3 ">
-              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  hover:shadow-lg transition-shadow duration-300 ">
+            <div key={project.id} className="p-4 md:w-1/3  ">
+              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-3xl hover:shadow-lg transition-shadow duration-300 bg-white  ">
               {
                   project.imageUrl ? (
                       <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.imageUrl} alt="Project" />

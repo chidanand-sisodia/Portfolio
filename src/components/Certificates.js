@@ -38,7 +38,7 @@ const certifications = [
 function Certificates() {
   return (
    <section className="text-gray-600 body-font">
-      <div className="container lg:px-20 lg:py-24 mx-auto pt-20 "> {/* Adjust pt-20 to match your navbar's height */}
+      <div className="container lg:px-16 lg:py-24 mx-auto pt-20 "> {/* Adjust pt-20 to match your navbar's height */}
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Certifications</h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">These are some of the certifications I have earned that validate my skills and capabilities in various technology areas.</p>

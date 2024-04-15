@@ -1,7 +1,12 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import DP from './images/DP1.jpg'; // Importing the image from your local folder
 
 function About() {
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth'; // Enable smooth scrolling for all operations
+  }, []);
+
+
   return (
     <div className="container mx-auto px-4 md:p-20 flex items-center min-h-screen bg-green-100 p-12">
       <div className="flex flex-col md:flex-row items-center justify-center py-12 md:py-24 bg-green-300 shadow-2xl rounded-lg mx-4 md:mx-0 p-12">

@@ -13,6 +13,13 @@ import Alert from './components/Alert';
 
 function App() {
 
+  const [showAbout, setShowAbout] = useState(false);
+
+  const handleScrollToAbout = () => {
+    setShowAbout(true);
+  };
+
+
  
   return (
     <Router>
