@@ -116,7 +116,7 @@ function Dashboard(onScrollToAbout) {
         navigate('/about');
       };
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4 sm:p-6">
+        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4 sm:p-6 fadeIn">
             <Alert onClose={() => console.log('Alert closed')} />
 
             <div className="text-center space-y-6">

@@ -54,3 +54,20 @@
   animation: googleColors 1s infinite;
 }
 
+/* Add at the top of your Dashboard.css file */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+
