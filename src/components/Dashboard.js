@@ -62,8 +62,10 @@
 
 import React, { useState, useEffect,useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaLinkedin, FaGithub, FaInstagram, FaFacebookF, FaTwitter, FaChevronDown } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebookF, FaTwitter, FaChevronDown,FaTelegramPlane  } from 'react-icons/fa';
 import Alert from './Alert';
+import twitter from './images/twitter_5969020.png'
+import './styles/Dashboard.css';
 
 function Dashboard(onScrollToAbout) {
     const navigate = useNavigate();
@@ -110,11 +112,14 @@ function Dashboard(onScrollToAbout) {
                 <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold lg:mb-9 sm:mb-6'>I'm Chidanand Sisodia</h1>
                 <h2 className='text-xl sm:text-2xl md:text-4xl font-medium text-gray-600 mb-6 inline-block overflow-hidden whitespace-nowrap'>{`${currentTitle}${reverse ? '' : '|'}`}</h2>
                 <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-10 p-2 mb-4">
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className='text-3xl sm:text-4xl md:text-5xl hover:text-blue-500'><FaLinkedin /></a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className='text-3xl sm:text-4xl md:text-5xl hover:text-gray-600'><FaGithub /></a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='text-3xl sm:text-4xl md:text-5xl hover:text-pink-600'><FaInstagram /></a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className='text-3xl sm:text-4xl md:text-5xl hover:text-blue-600'><FaFacebookF /></a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className='text-3xl sm:text-4xl md:text-5xl hover:text-blue-400'><FaTwitter /></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-blue-500'><FaLinkedin /></a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-gray-600'><FaGithub /></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-pink-600'><FaInstagram /></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-blue-600'><FaFacebookF /></a>
+                    <a href="https://telegram.me/Chidanandsisodia" target="_blank" rel="noopener noreferrer" className='floating-icon  text-3xl sm:text-4xl md:text-5xl hover:text-blue-400'><FaTelegramPlane /></a>
+
+
+                    {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className='text-3xl sm:text-4xl md:text-5xl hover:text-blue-400'><FaTwitter /></a> */}
                 </div>
                 <br></br>
                  <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">About Me !</button>

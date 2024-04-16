@@ -1,64 +1,37 @@
-  /*body, html {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  */
-  .hero-container {
-      text-align: center;
-      padding: 50px;
-    }
-    
-    .hero-container h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+/* 
+  .floating-icon {
+    display: inline-block;
 
-    }
-    
-    .hero-container h2 {
-      font-weight: 500;
-      
-      font-size: 1.5rem;
-      color: #555;
-      margin-bottom: 20px;
-      display: inline-block;
-      word-wrap: break-word;
-      overflow: hidden;
-      white-space: nowrap;
-    }
+    text-decoration: none; 
+    font-size: 3rem; 
+    transition: all 0.3s ease; 
+ 
+}
 
-    .social-icons {
-      
-      display: flex;             /* Lays out children in a horizontal row */
-      align-items: center;       /* Vertically centers children */
-      justify-content: center;   /* Horizontally centers items in the container */
-      padding:10px;                /* Removes padding, important if it's a list */
-      list-style: none;          /* Removes list styles if it's an unordered list */
-      gap: 40px;                 /* Adds space between each icon */
-  }
+.floating-icon:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5); 
+}
 
-  .social-icons .icon {
-    width: 35px;   /* Set specific width if applicable */
-    height: 35px;  /* Set specific height if applicable */
-    font-size: 35px; /* Or set font-size for scalable icons */
-  }
+ */
 
-  .social-icons a {
-    font-size:xx-large;
-    display: inline-flex;      /* Makes the link behave like an inline element but uses flexbox */
-    align-items: center;       /* Center aligns the icon vertically */
-    justify-content: center;   /* Center aligns the icon horizontally */
-    margin: 0 1px;
-    text-decoration: none;    /* Removes underline from links */
-    color: #333;               /* Sets the icon color */
-    font-size: 24px;           /* Sets the size of the icons */
-    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
-  }
+ .floating-icon {
+  display: inline-block;
+  text-decoration: none; /* Removes underline from the anchor tag */
+  font-size: 3rem; /* Adjust size according to your needs */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  background: transparent; /* Ensures no background color interferes */
+}
 
-  .social-icons a:hover {
-    color: #007bff;           /* Changes color on hover */
-  }
+.floating-icon:hover {
+  transform: translateY(-5px); /* Lifts the icon up on hover */
+}
 
+.floating-icon svg { /* Assuming the icon is an SVG. Adjust the selector if it's an <i> or <img> */
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+.floating-icon:hover svg {
+  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.7)); /* Larger shadow on hover */
+}
 
