@@ -5,7 +5,7 @@ import gif from './images/giphy.gif';
 function Footer() {
   return (
     <footer className=" text-white body-font">
-      <div className=" bg-gray-800 container px-5 py-10 mx-auto flex items-center sm:flex-row flex-col ">
+      <div className=" bg-gray-800 container px-5 py-10 mx-auto max-w-full flex items-center sm:flex-row flex-col ">
         <a className="flex title-font font-medium items-center md:justify-start justify-center text-white ">
           {/* <svg xmlns={gif} fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
