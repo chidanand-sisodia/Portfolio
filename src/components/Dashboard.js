@@ -138,8 +138,8 @@ function Dashboard(onScrollToAbout) {
                  <button onClick={scrollToNextSection} type="button" className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">About Me !</button>
                  <button onClick={toggleModal} type="button" className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Resume</button>
                  {isModalOpen && (
-                <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center p-4 z-20">
-                    <div className="bg-white rounded-lg shadow-lg p-5 relative w-full max-w-4xl h-full md:h-auto overflow-y-auto sm:mt-2">
+                <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center p-4 z-20 max-w-full">
+                    <div className="bg-white rounded-lg shadow-lg p-5 relative w-full max-w-4xl h-full md:h-auto sm:h-auto overflow-y-auto sm:mt-2">
                         {/* Close Button */}
                         <button onClick={toggleModal} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
                         <svg className="fill-current h-10 w-10" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
