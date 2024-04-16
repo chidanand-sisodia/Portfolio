@@ -62,7 +62,7 @@
 
 import React, { useState, useEffect,useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaLinkedin, FaGithub, FaInstagram, FaFacebookF, FaTwitter, FaChevronDown,FaTelegramPlane  } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram,  FaChevronDown,FaTelegramPlane,FaEnvelope, FaDownload  } from 'react-icons/fa';
 import Alert from './Alert';
 import twitter from './images/twitter_5969020.png'
 import './styles/Dashboard.css';
@@ -75,6 +75,18 @@ function Dashboard(onScrollToAbout) {
     const [subIndex, setSubIndex] = useState(0);
     const [reverse, setReverse] = useState(false);
     const nextSectionRef = useRef(null);
+
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
+        if (!isModalOpen) {
+            document.body.style.overflow = 'hidden'; // Disable scroll when modal is open
+        } else {
+            document.body.style.overflow = 'unset'; // Enable scroll when modal is closed
+        }
+    };
 
     // Typing effect
     useEffect(() => {
@@ -114,16 +126,46 @@ function Dashboard(onScrollToAbout) {
                 <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-10 p-2 mb-4">
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-blue-500'><FaLinkedin /></a>
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-gray-600'><FaGithub /></a>
+                    <a href="mailto:chidanandrajput.com" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:animate-googleColors'><FaEnvelope /> </a>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-pink-600'><FaInstagram /></a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-blue-600'><FaFacebookF /></a>
+                    {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-blue-600'><FaFacebookF /></a> */}
                     <a href="https://telegram.me/Chidanandsisodia" target="_blank" rel="noopener noreferrer" className='floating-icon  text-3xl sm:text-4xl md:text-5xl hover:text-blue-400'><FaTelegramPlane /></a>
 
 
                     {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className='text-3xl sm:text-4xl md:text-5xl hover:text-blue-400'><FaTwitter /></a> */}
                 </div>
                 <br></br>
-                 <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">About Me !</button>
-                 <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Resume</button>
+                 <button onClick={scrollToNextSection} type="button" className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">About Me !</button>
+                 <button onClick={toggleModal} type="button" className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">Resume</button>
+                 {isModalOpen && (
+                <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center p-4 z-20">
+                    <div className="bg-white rounded-lg shadow-lg p-5 relative w-full max-w-4xl h-full md:h-auto overflow-y-auto sm:mt-2">
+                        {/* Close Button */}
+                        <button onClick={toggleModal} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">
+                        <svg className="fill-current h-10 w-10" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <title>Close</title>
+              <path d="M14.348 14.849a1.2 1.2 0 01-1.697 0L10 11.846 7.349 14.849a1.2 1.2 0 01-1.697-1.697L8.303 10 5.652 7.349A1.2 1.2 0 117.349 5.651L10 8.303l2.651-2.652a1.2 1.2 0 111.697 1.697L11.697 10l2.651 2.651a1.2 1.2 0 010 1.698z"/>
+            </svg>
+                        </button>
+
+                        {/* Resume Image within a scrollable container */}
+                        <div className="overflow-y-auto max-h-96">
+                            <img src="https://ik.imagekit.io/dpst6vive/certificates/Chidanand_Resume_page-0001.jpg?updatedAt=1713277081061" alt="Resume" className="w-full h-auto" />
+                        </div>
+
+                        {/* Download Button */}
+                        <a
+                            href="https://ik.imagekit.io/dpst6vive/certificates/Chidanand_Resume.pdf?updatedAt=1713278240679"
+                            download="Chidanand's_Resume.pdf"
+                            className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg mt-4"
+                        >
+                            <FaDownload />
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            )}
+
                 <br></br>
                 <br></br> 
                 <div>

@@ -35,3 +35,22 @@
   filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.7)); /* Larger shadow on hover */
 }
 
+@keyframes googleColors {
+  0%, 100% {
+    color: #3e65cf; /* Blue */
+  }
+  25% {
+    color: #c71610; /* Red */
+  }
+  50% {
+    color: #f2a60c; /* Yellow */
+  }
+  /* 75% {
+    color: #08851b; 
+  } */
+}
+
+.floating-icon:hover {
+  animation: googleColors 1s infinite;
+}
+

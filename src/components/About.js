@@ -17,7 +17,7 @@ function About() {
             className="rounded-full shadow-lg max-w-full h-auto align-middle border-none"
           />
         </div>
-        <div className="md:flex-1 p-5">
+        <div className="md:flex-1 lg:p-5 sm:pt-5">
           <h1 className="text-3xl font-bold text-gray-800 mb-3">About Me</h1>
           <p className="text-lg font-bold text-gray-600 mb-4">
           I am Chidanand Sisodia, a software developer with a passion for Data Science 

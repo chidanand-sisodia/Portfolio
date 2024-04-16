@@ -181,11 +181,11 @@ function Projects() {
       <div className="container lg:px-16 lg:py-24 mx-auto pt-20">
       <div className="text-center mb-20">
         <h1 className="text-4xl font-bold mb-4">Projects</h1>
-        <p className="text-lg text-gray-600 mb-8">
+        <p className="text-lg text-gray-600 mb-8 p-5">
           I am passionate about building and exploring new projects that challenge my understanding and enhance my skills.
           Below are some of the projects I've worked on that demonstrate my ability to develop solutions that meet real-world needs.
         </p>
-        <hr className="border-b-2  border-gray-300 my-8 mx-auto w-3/4" />
+        <hr className="border-b-2  border-gray-400 my-8 mx-auto w-3/4" />
       </div>
         <div className="flex flex-wrap sm:px-8 ">
           {projects.map((project) => (

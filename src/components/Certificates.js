@@ -64,10 +64,10 @@ function Certificates() {
    <section className="text-gray-600 body-font bg-gray-200">
       <div className="container lg:px-16 lg:py-24 mx-auto pt-20 "> {/* Adjust pt-20 to match your navbar's height */}
         <div className="text-center mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Certifications</h1>
-          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">These are some of the certifications I have earned that validate my skills and capabilities in various technology areas.</p>
+          <h1 className="sm:text-4xl text-2xl font-medium title-font text-gray-900 mb-4">Certifications</h1>
+          <p className="text-xl leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto p-5">These are some of the certifications I have earned that validate my skills and capabilities in various technology areas.</p>
           <div className="flex mt-6 justify-center">
-            <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+            <div className="w-28 h-1 rounded-full bg-gray-500 inline-flex"></div> {/*underline*/ }
           </div>
         </div>
         <div className="flex flex-wrap ">
