@@ -189,7 +189,7 @@ function Projects() {
       </div>
         <div className="flex flex-wrap sm:px-8 ">
           {projects.map((project) => (
-            <div key={project.id} className="p-4 md:w-1/3  ">
+            <div key={project.id} className="p-4 md:w-1/2 lg:w-1/3  ">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-3xl hover:shadow-lg transition-shadow duration-300 bg-white  ">
               {
                   project.imageUrl ? (
