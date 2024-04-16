@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaInstagram, FaFacebookF, FaTwitter, FaTelegram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram,  FaTelegram,FaEnvelope } from 'react-icons/fa';
 
 function Contact() {
   return (
@@ -26,11 +26,11 @@ function Contact() {
             <a href="https://github.com/chidanand-sisodia" className="mr-2 text-gray-500 hover:text-gray-700">
               <FaGithub size="24" />
             </a>
+            <a href="mailto:chidanandrajput.com" className="mr-2 text-gray-500 hover:text-gray-700">
+              <FaEnvelope size="24" />
+            </a>
             <a href="https://www.instagram.com/__mr.rajput__07" className="mr-2 text-gray-500 hover:text-gray-700">
               <FaInstagram size="24" />
-            </a>
-            <a href="https://facebook.com/profile.php?id=100069659790587" className="mr-2 text-gray-500 hover:text-gray-700">
-              <FaFacebookF size="24" />
             </a>
             <a href="https://telegram.com/Chidanandsisodia" className="text-gray-500 hover:text-gray-700">
               <FaTelegram size="24" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaLinkedin, FaTwitter, FaFacebookF, FaGithub, FaTelegram } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTwitter, FaFacebookF, FaGithub, FaTelegram, FaEnvelope } from 'react-icons/fa';
 import gif from './images/giphy.gif';
 
 function Footer() {
@@ -27,15 +27,15 @@ function Footer() {
           <a className="ml-4 text-gray-400" href="https://github.com/chidanand-sisodia">
             <FaGithub />
           </a>
+          <a className="ml-4 text-gray-400" href="mailto:chidanandrajput.com">
+            <FaEnvelope />
+          </a>
           
           <a className="ml-4 text-gray-400" href="https://www.telegram.me/ChidanandSisodia">
             <FaTelegram />
           </a>
           <a className="ml-4 text-gray-400" href="https://www.instagram.com/__mr.rajput__07">
             <FaInstagram />
-          </a>
-          <a className="ml-4 text-gray-400" href="https://www.facebook.com/profile.php?id=100069659790587">
-            <FaFacebookF />
           </a>
         </span>
       </div>

@@ -124,10 +124,10 @@ function Dashboard(onScrollToAbout) {
                 <h1 className='text-4xl sm:text-5xl md:text-6xl font-bold lg:mb-9 sm:mb-6'>I'm Chidanand Sisodia</h1>
                 <h2 className='text-xl sm:text-2xl md:text-4xl font-medium text-gray-600 mb-6 inline-block overflow-hidden whitespace-nowrap'>{`${currentTitle}${reverse ? '' : '|'}`}</h2>
                 <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-10 p-2 mb-4">
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-blue-500'><FaLinkedin /></a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-gray-600'><FaGithub /></a>
+                    <a href="https://www.linkedin.com/in/chidanand-sisodia-9576381b4/" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-blue-500'><FaLinkedin /></a>
+                    <a href="https://github.com/chidanand-sisodia" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-gray-600'><FaGithub /></a>
                     <a href="mailto:chidanandrajput.com" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:animate-googleColors'><FaEnvelope /> </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-pink-600'><FaInstagram /></a>
+                    <a href="https://instagram.com/__mr.rajput__07" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-pink-600'><FaInstagram /></a>
                     {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className='floating-icon text-3xl sm:text-4xl md:text-5xl hover:text-blue-600'><FaFacebookF /></a> */}
                     <a href="https://telegram.me/Chidanandsisodia" target="_blank" rel="noopener noreferrer" className='floating-icon  text-3xl sm:text-4xl md:text-5xl hover:text-blue-400'><FaTelegramPlane /></a>
 
