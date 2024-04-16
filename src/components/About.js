@@ -20,19 +20,18 @@ function About() {
         <div className="md:flex-1 p-5">
           <h1 className="text-3xl font-bold text-gray-800 mb-3">About Me</h1>
           <p className="text-lg font-bold text-gray-600 mb-4">
-            I'm Chidanand Sisodia, a passionate software developer with a focus on web development
-            and data science. I love building interactive applications and exploring new technologies
-            that improve user experiences.
+          I am Chidanand Sisodia, a software developer with a passion for Data Science 
+          and a broad interest in various technologies. My professional path reflects a commitment to 
+          learning and utilizing a diverse range of tools and frameworks, ensuring I remain adaptable 
+          and innovative in the ever-evolving tech landscape.
           </p>
           <p className="text-lg font-bold text-gray-600">
-            My journey in tech started with my interest in problem-solving and has evolved into a
-            career that allows me to creatively express solutions through code. I specialize in
-            modern JavaScript frameworks and have a keen interest in developing scalable web
-            applications.
-            My journey in tech started with my interest in problem-solving and has evolved into a
-            career that allows me to creatively express solutions through code. I specialize in
-            modern JavaScript frameworks and have a keen interest in developing scalable web
-            applications.
+          I am enthusiastic about exploring new solutions and continuously expanding my skills, 
+          particularly in Software development and Data Science. 
+          My approach is characterized by a constant drive to integrate creative problem-solving 
+          with the latest technological advancements, aiming to produce impactful and forward-thinking solutions.
+
+
           </p>
         </div>
       </div>

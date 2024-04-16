@@ -61,7 +61,7 @@ const certifications = [
 
 function Certificates() {
   return (
-   <section className="text-gray-600 body-font">
+   <section className="text-gray-600 body-font bg-gray-200">
       <div className="container lg:px-16 lg:py-24 mx-auto pt-20 "> {/* Adjust pt-20 to match your navbar's height */}
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Certifications</h1>

@@ -113,7 +113,8 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link, useLocation } from 'react-router-dom';
 import DP from './images/DP1.jpg';  // Ensure the image path is correct for your logo
-
+import brand from './images/brand.png';
+import gif from './images/giphy.gif';
 const navigation = [
   { name: 'HOME', href: '/' },
   { name: 'ABOUT', href: '/about' },
@@ -138,8 +139,8 @@ export default function Navbar() {
               <div className="flex-shrink-0 flex items-center">
                 <Link to="/">
                   <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white"
+                    className="block lg:hidden h-12  ml-3  w-auto"
+                    src={gif}
                     alt="Workflow"
                   />
                 </Link>

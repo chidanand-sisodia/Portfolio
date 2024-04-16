@@ -1,9 +1,9 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebookF, FaTwitter, FaTelegram } from 'react-icons/fa';
 
 function Contact() {
   return (
-    <section className="text-gray-700 body-font relative bg-gray-200">
+    <section className="text-gray-700 body-font relative bg-gray-500">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="lg:w-1/2 md:w-1/2 bg-white  p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 ">
           <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Contact Me</h2>
@@ -20,20 +20,20 @@ function Contact() {
           <p className="leading-relaxed mb-3">Dhule, Maharashtra</p>
           <a className="leading-relaxed mb-3 text-indigo-500" href="mailto:chidanandrajput@gmail.com">chidanandrajput@gmail.com</a>
           <div className="flex">
-            <a href="https://linkedin.com/in/yourusername" className="mr-2 text-gray-500 hover:text-gray-700">
+            <a href="https://linkedin.com/in/chidanand-sisodia-9576381b4" className="mr-2 text-gray-500 hover:text-gray-700">
               <FaLinkedin size="24" />
             </a>
-            <a href="https://github.com/yourusername" className="mr-2 text-gray-500 hover:text-gray-700">
+            <a href="https://github.com/chidanand-sisodia" className="mr-2 text-gray-500 hover:text-gray-700">
               <FaGithub size="24" />
             </a>
-            <a href="https://instagram.com/yourusername" className="mr-2 text-gray-500 hover:text-gray-700">
+            <a href="https://www.instagram.com/__mr.rajput__07" className="mr-2 text-gray-500 hover:text-gray-700">
               <FaInstagram size="24" />
             </a>
-            <a href="https://facebook.com/yourusername" className="mr-2 text-gray-500 hover:text-gray-700">
+            <a href="https://facebook.com/profile.php?id=100069659790587" className="mr-2 text-gray-500 hover:text-gray-700">
               <FaFacebookF size="24" />
             </a>
-            <a href="https://twitter.com/yourusername" className="text-gray-500 hover:text-gray-700">
-              <FaTwitter size="24" />
+            <a href="https://telegram.com/Chidanandsisodia" className="text-gray-500 hover:text-gray-700">
+              <FaTelegram size="24" />
             </a>
           </div>
         </div>
